@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/recipes"></ion-back-button>
+    </ion-buttons>
     <ion-title>
       {{recipe?.title}}
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="deleteRecipe()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +23,6 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <!-- <ion-title>{{recipe?.title}}</ion-title> -->
         <h1 class="ion-text-center">{{recipe?.title}}</h1>
       </ion-col>
     </ion-row>
